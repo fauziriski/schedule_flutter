@@ -3,6 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:schedule_app/ui/login.dart';
+import 'package:schedule_app/ui/register.dart';
 
 void main() {
   runApp(GetStarted());
@@ -53,7 +54,12 @@ class _GetStartedState extends State<GetStarted> {
                       width: double.infinity,
                       height: 45,
                       child: ElevatedButton(
-                        onPressed: (() {}),
+                        onPressed: (() {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                            return Register();
+                          }));
+                        }),
                         child: Text(
                           "Daftar",
                           style: TextStyle(
